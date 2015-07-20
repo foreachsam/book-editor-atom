@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/all;
+Actions=OpenWithAtom;
+X-KDE-Priority=TopLevel
+
+[Desktop Action OpenWithAtom]
+Name=Open with Atom
+Icon=atom
+Exec=atom %F

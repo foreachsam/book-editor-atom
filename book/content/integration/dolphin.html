@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>如何設定「Mardown Preview」的字型 | Editor - Atom</title>
+        <title>Dolphin右鍵選單 | Editor - Atom</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,8 +19,10 @@
         
     
     
+    <link rel="next" href="../../content/howto/index.html" />
     
-    <link rel="prev" href="../../content/howto/font.html" />
+    
+    <link rel="prev" href="../../content/integration/index.html" />
     
 
         
@@ -32,7 +34,7 @@
 
 
         
-    <div class="book" data-level="4.1.1" data-basepath="../.." data-revision="1437383787668">
+    <div class="book" data-level="3.1" data-basepath="../.." data-revision="1437383787668">
     
 
 <div class="book-summary">
@@ -167,7 +169,7 @@
                 
     
         
-        <li class="chapter " data-level="3.1" data-path="content/integration/dolphin.html">
+        <li class="chapter active" data-level="3.1" data-path="content/integration/dolphin.html">
             
                 
                     <a href="../../content/integration/dolphin.html">
@@ -222,7 +224,7 @@
                 
     
         
-        <li class="chapter active" data-level="4.1.1" data-path="content/howto/font-markdown-preview.html">
+        <li class="chapter " data-level="4.1.1" data-path="content/howto/font-markdown-preview.html">
             
                 
                     <a href="../../content/howto/font-markdown-preview.html">
@@ -336,24 +338,31 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_2">
+                    <section class="normal" id="section-gitbook_5">
                     
-                        <h1 id="mardown-preview">如何設定「Mardown Preview」的字型</h1>
-<p>選擇功能選單「Edit / Open Your Stylesheet」，</p>
-<p>編輯「~/.atom/styles.less」，</p>
-<p>加入下面的程式碼。重新開啟「Atom」，就會生效了。</p>
-<pre><code class="lang-css">@font-family: &quot;Liberation Mono&quot;, &quot;Noto Sans CJK TC&quot;, monospace;
-.markdown-preview {
-    font-family: @font-family;
-    font-size:18px;
-    code,
-    tt,
-    atom-text-editor {
-        font-family: @font-family;
-    }
-}
+                        <h1 id="dolphin-">Dolphin 右鍵選單</h1>
+<h2 id="kdesharekde4servicesservicemenus">產生資料夾「~/.kde/share/kde4/services/ServiceMenus/」</h2>
+<p>執行</p>
+<pre><code>$ ~/.kde/share/kde4/services/ServiceMenus/ -p
+</code></pre><h2 id="kdesharekde4servicesservicemenus">切換資料夾「~/.kde/share/kde4/services/ServiceMenus/」</h2>
+<p>執行</p>
+<pre><code>$ cd ~/.kde/share/kde4/services/ServiceMenus/
+</code></pre><h2 id="kdesharekde4servicesservicemenusatomdesktop">建立檔案「~/.kde/share/kde4/services/ServiceMenus/atom.desktop」</h2>
+<p>執行</p>
+<pre><code>$ vi atom.desktop
+</code></pre><p>填入下面的「<a href="../../resource/integration/atom.desktop">內容</a>」。</p>
+<pre><code class="lang-ini"><span class="hljs-title">[Desktop Entry]</span>
+<span class="hljs-setting">Type=<span class="hljs-value">Service</span></span>
+<span class="hljs-setting">ServiceTypes=<span class="hljs-value">KonqPopupMenu/Plugin</span></span>
+<span class="hljs-setting">MimeType=<span class="hljs-value">all/all;</span></span>
+<span class="hljs-setting">Actions=<span class="hljs-value">OpenWithAtom;</span></span>
+<span class="hljs-setting">X-KDE-Priority=<span class="hljs-value">TopLevel</span></span>
+
+<span class="hljs-title">[Desktop Action OpenWithAtom]</span>
+<span class="hljs-setting">Name=<span class="hljs-value">Open with Atom</span></span>
+<span class="hljs-setting">Icon=<span class="hljs-value">atom</span></span>
+<span class="hljs-setting">Exec=<span class="hljs-value">atom %F</span></span>
 </code></pre>
-<p>以上範例是參考「Gihub / atom / markdown-preview / styles / <a href="https://github.com/atom/markdown-preview/blob/master/styles/markdown-preview.less" target="_blank">markdown-preview.less</a>」</p>
 
                     
                     </section>
@@ -364,8 +373,10 @@
         </div>
 
         
-        <a href="../../content/howto/font.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 設定字型"><i class="fa fa-angle-left"></i></a>
+        <a href="../../content/integration/index.html" class="navigation navigation-prev " aria-label="Previous page: 整合"><i class="fa fa-angle-left"></i></a>
         
+        
+        <a href="../../content/howto/index.html" class="navigation navigation-next " aria-label="Next page: Howto"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
