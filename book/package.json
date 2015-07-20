@@ -1,0 +1,15 @@
+{
+  "name": "book-editor-atom",
+  "version": "1.0.0",
+  "description": "Editor Atom",
+  "main": "index.js",
+  "dependencies": {
+    "gitbook-plugin-ga": "^0.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "foreachsam",
+  "license": "CC"
+}
