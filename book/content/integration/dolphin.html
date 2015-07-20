@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="3.1" data-basepath="../.." data-revision="1437383787668">
+    <div class="book" data-level="3.1" data-basepath="../.." data-revision="1437384843749">
     
 
 <div class="book-summary">
@@ -362,6 +362,15 @@
 <span class="hljs-setting">Name=<span class="hljs-value">Open with Atom</span></span>
 <span class="hljs-setting">Icon=<span class="hljs-value">atom</span></span>
 <span class="hljs-setting">Exec=<span class="hljs-value">atom %F</span></span>
+</code></pre>
+<h2 id="shell-script">寫成「Shell Script」</h2>
+<p>上面的步驟可以簡單的寫成下面的「<a href="../../resource/integration/atom-install.sh">Shell Script</a>」。</p>
+<pre><code class="lang-sh"><span class="hljs-shebang">#!/bin/sh
+</span>
+Service_Dir=~/.kde/share/kde4/services/ServiceMenus/
+mkdir <span class="hljs-variable">$Service_Dir</span> -p
+<span class="hljs-built_in">cd</span> <span class="hljs-variable">$Service_Dir</span>
+wget -c https://foreachsam.github.io/book-editor-atom/book/resource/integration/atom.desktop
 </code></pre>
 
                     
