@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="3.1" data-basepath="../.." data-revision="1437384843749">
+    <div class="book" data-level="3.1" data-basepath="../.." data-revision="1437386233572">
     
 
 <div class="book-summary">
@@ -372,6 +372,17 @@ mkdir <span class="hljs-variable">$Service_Dir</span> -p
 <span class="hljs-built_in">cd</span> <span class="hljs-variable">$Service_Dir</span>
 wget -c https://foreachsam.github.io/book-editor-atom/book/resource/integration/atom.desktop
 </code></pre>
+<h2 id="">簡化步驟</h2>
+<p>所以只要執行下面這行指令，就可以完成上面的所有步驟了。</p>
+<pre><code class="lang-sh">$ wget -qO- https://foreachsam.github.io/book-editor-atom/book/resource/integration/atom-install.sh | sh
+</code></pre>
+<p>或是</p>
+<pre><code>$ curl -o- https://foreachsam.github.io/book-editor-atom/book/resource/integration/atom-install.sh | sh
+</code></pre><p>以上參考「<a href="https://github.com/creationix/nvm#install-script" target="_blank">nvm</a>」的安裝指令。</p>
+<p>或是</p>
+<pre><code class="lang-sh">$ curl <span class="hljs-operator">-s</span>S https://foreachsam.github.io/book-editor-atom/book/resource/integration/atom-install.sh | sh
+</code></pre>
+<p>以上參考「<a href="https://getcomposer.org/download/" target="_blank">composer</a>」的安裝指令。</p>
 
                     
                     </section>
