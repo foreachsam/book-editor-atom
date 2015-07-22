@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>atom指令的使用 | Editor - Atom</title>
+        <title>apm list | Editor - Atom</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../content/integration/index.html" />
+    <link rel="next" href="../../content/cmd/cmd-apm-list-packages.html" />
     
     
-    <link rel="prev" href="../../content/start/install.html" />
+    <link rel="prev" href="../../content/start/cmd-apm.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="2.2" data-basepath="../.." data-revision="1437551414283">
+    <div class="book" data-level="5.1.1" data-basepath="../.." data-revision="1437551414283">
     
 
 <div class="book-summary">
@@ -115,7 +115,7 @@
         </li>
     
         
-        <li class="chapter active" data-level="2.2" data-path="content/start/cmd-atom.html">
+        <li class="chapter " data-level="2.2" data-path="content/start/cmd-atom.html">
             
                 
                     <a href="../../content/start/cmd-atom.html">
@@ -268,7 +268,7 @@
                 
     
         
-        <li class="chapter " data-level="5.1.1" data-path="content/cmd/cmd-apm-list.html">
+        <li class="chapter active" data-level="5.1.1" data-path="content/cmd/cmd-apm-list.html">
             
                 
                     <a href="../../content/cmd/cmd-apm-list.html">
@@ -420,19 +420,224 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_13">
+                    <section class="normal" id="section-gitbook_4">
                     
-                        <h1 id="command-atom">command atom</h1>
-<h2 id="">開啟檔案</h2>
-<p>執行下面的指令，開啟某個檔案。「file_path」請更改成你要開啟的檔案名稱，或是檔案路徑。</p>
-<pre><code>$ atom file_path
-</code></pre><h2 id="">開啟資料夾</h2>
-<p>執行下面的指令，開啟某個資料夾。「dir_path」請更改成你要開啟的資料夾名稱，或是資料夾路徑。</p>
-<pre><code>$ atom dir_path
-</code></pre><p>這個會起動「atom」，然後在左方的樹狀瀏覽，就會以這個「資料夾」當成「根部」來展開，在這個資料夾底下的所有檔案資料夾都會顯示在左方的檔案樹狀瀏覽。
-也就是把這個資料夾當成「project」的根目錄。</p>
-<p>所以當你在某個資料夾底下，就可以執行下面的指令，來開啟該資料夾。</p>
-<pre><code>$ atom ./
+                        <h1 id="apm-list">apm list</h1>
+<h2 id="">使用說明</h2>
+<p>執行</p>
+<pre><code>$ apm help list
+</code></pre><p>顯示</p>
+<pre><code>Usage: apm list
+       apm list --themes
+       apm list --packages
+       apm list --installed
+       apm list --installed --bare &gt; my-packages.txt
+       apm list --json
+
+List all the installed packages and also the packages bundled with Atom.
+
+Options:
+  -b, --bare       Print packages one per line with no formatting                          [boolean]
+  -d, --dev        Include dev packages                                    [boolean] [default: true]
+  -h, --help       Print this usage message
+  -i, --installed  Only list installed packages/themes                                     [boolean]
+  -j, --json       Output all packages as a JSON object                                    [boolean]
+  -l, --links      Include linked packages                                 [boolean] [default: true]
+  -t, --themes     Only list themes                                                        [boolean]
+  -p, --packages   Only list packages                                                      [boolean]
+
+  Prefix an option with `no-` to set it to false such as --no-color to disable
+  colored output.
+</code></pre><h2 id="">主要範例</h2>
+<p>執行</p>
+<pre><code>$ apm list
+</code></pre><p>顯示</p>
+<pre><code>Built-in Atom packages (88)
+├── archive-view@0.58.0
+├── atom-dark-syntax@0.27.0
+├── atom-dark-ui@0.49.0
+├── atom-light-syntax@0.28.0
+├── atom-light-ui@0.41.0
+├── autocomplete-atom-api@0.9.0
+├── autocomplete-css@0.8.0
+├── autocomplete-html@0.7.2
+├── autocomplete-plus@2.17.4
+├── autocomplete-snippets@1.7.0
+├── autoflow@0.25.0
+├── autosave@0.22.0
+├── background-tips@0.25.0
+├── base16-tomorrow-dark-theme@0.26.0
+├── base16-tomorrow-light-theme@0.9.0
+├── bookmarks@0.35.0
+├── bracket-matcher@0.76.0
+├── command-palette@0.36.0
+├── deprecation-cop@0.53.0
+├── dev-live-reload@0.46.0
+├── encoding-selector@0.21.0
+├── exception-reporting@0.35.0
+├── find-and-replace@0.174.2
+├── fuzzy-finder@0.87.0
+├── git-diff@0.55.0
+├── go-to-line@0.30.0
+├── grammar-selector@0.47.0
+├── image-view@0.54.0
+├── incompatible-packages@0.24.0
+├── keybinding-resolver@0.33.0
+├── language-c@0.45.0
+├── language-clojure@0.16.0
+├── language-coffee-script@0.41.0
+├── language-csharp@0.6.0
+├── language-css@0.32.0
+├── language-gfm@0.78.0
+├── language-git@0.10.0
+├── language-go@0.30.0
+├── language-html@0.40.0
+├── language-hyperlink@0.14.0
+├── language-java@0.15.0
+├── language-javascript@0.80.0
+├── language-json@0.15.0
+├── language-less@0.28.0
+├── language-make@0.14.0
+├── language-mustache@0.12.0
+├── language-objective-c@0.15.0
+├── language-perl@0.28.0
+├── language-php@0.27.0
+├── language-property-list@0.8.0
+├── language-python@0.37.0
+├── language-ruby@0.56.0
+├── language-ruby-on-rails@0.22.0
+├── language-sass@0.39.0
+├── language-shellscript@0.15.0
+├── language-source@0.9.0
+├── language-sql@0.17.0
+├── language-text@0.7.0
+├── language-todo@0.25.0
+├── language-toml@0.16.0
+├── language-xml@0.30.0
+├── language-yaml@0.22.0
+├── link@0.30.0
+├── markdown-preview@0.150.0
+├── metrics@0.51.0
+├── notifications@0.57.0
+├── one-dark-syntax@1.0.0
+├── one-dark-ui@1.0.0
+├── one-light-syntax@1.0.0
+├── one-light-ui@1.0.0
+├── open-on-github@0.37.0
+├── package-generator@0.40.0
+├── release-notes@0.53.0
+├── settings-view@0.211.0
+├── snippets@0.95.0
+├── solarized-dark-syntax@0.38.1
+├── solarized-light-syntax@0.22.1
+├── spell-check@0.59.0
+├── status-bar@0.75.1
+├── styleguide@0.44.0
+├── symbols-view@0.100.0
+├── tabs@0.82.0
+├── timecop@0.31.0
+├── tree-view@0.177.0
+├── update-package-dependencies@0.10.0
+├── welcome@0.29.0
+├── whitespace@0.30.0
+└── wrap-guide@0.35.0
+
+/home/user/.atom/packages (1)
+└── hello-package@0.0.0
+</code></pre><h2 id="bare-">bare 範例</h2>
+<p>執行</p>
+<pre><code>$ apm list --bare
+</code></pre><p>顯示</p>
+<pre><code>archive-view@0.58.0
+atom-dark-syntax@0.27.0
+atom-dark-ui@0.49.0
+atom-light-syntax@0.28.0
+atom-light-ui@0.41.0
+autocomplete-atom-api@0.9.0
+autocomplete-css@0.8.0
+autocomplete-html@0.7.2
+autocomplete-plus@2.17.4
+autocomplete-snippets@1.7.0
+autoflow@0.25.0
+autosave@0.22.0
+background-tips@0.25.0
+base16-tomorrow-dark-theme@0.26.0
+base16-tomorrow-light-theme@0.9.0
+bookmarks@0.35.0
+bracket-matcher@0.76.0
+command-palette@0.36.0
+deprecation-cop@0.53.0
+dev-live-reload@0.46.0
+encoding-selector@0.21.0
+exception-reporting@0.35.0
+find-and-replace@0.174.2
+fuzzy-finder@0.87.0
+git-diff@0.55.0
+go-to-line@0.30.0
+grammar-selector@0.47.0
+image-view@0.54.0
+incompatible-packages@0.24.0
+keybinding-resolver@0.33.0
+language-c@0.45.0
+language-clojure@0.16.0
+language-coffee-script@0.41.0
+language-csharp@0.6.0
+language-css@0.32.0
+language-gfm@0.78.0
+language-git@0.10.0
+language-go@0.30.0
+language-html@0.40.0
+language-hyperlink@0.14.0
+language-java@0.15.0
+language-javascript@0.80.0
+language-json@0.15.0
+language-less@0.28.0
+language-make@0.14.0
+language-mustache@0.12.0
+language-objective-c@0.15.0
+language-perl@0.28.0
+language-php@0.27.0
+language-property-list@0.8.0
+language-python@0.37.0
+language-ruby@0.56.0
+language-ruby-on-rails@0.22.0
+language-sass@0.39.0
+language-shellscript@0.15.0
+language-source@0.9.0
+language-sql@0.17.0
+language-text@0.7.0
+language-todo@0.25.0
+language-toml@0.16.0
+language-xml@0.30.0
+language-yaml@0.22.0
+link@0.30.0
+markdown-preview@0.150.0
+metrics@0.51.0
+notifications@0.57.0
+one-dark-syntax@1.0.0
+one-dark-ui@1.0.0
+one-light-syntax@1.0.0
+one-light-ui@1.0.0
+open-on-github@0.37.0
+package-generator@0.40.0
+release-notes@0.53.0
+settings-view@0.211.0
+snippets@0.95.0
+solarized-dark-syntax@0.38.1
+solarized-light-syntax@0.22.1
+spell-check@0.59.0
+status-bar@0.75.1
+styleguide@0.44.0
+symbols-view@0.100.0
+tabs@0.82.0
+timecop@0.31.0
+tree-view@0.177.0
+update-package-dependencies@0.10.0
+welcome@0.29.0
+whitespace@0.30.0
+wrap-guide@0.35.0
+
+hello-package@0.0.0
 </code></pre>
                     
                     </section>
@@ -443,10 +648,10 @@
         </div>
 
         
-        <a href="../../content/start/install.html" class="navigation navigation-prev " aria-label="Previous page: 下載安裝"><i class="fa fa-angle-left"></i></a>
+        <a href="../../content/start/cmd-apm.html" class="navigation navigation-prev " aria-label="Previous page: apm指令的使用"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../content/integration/index.html" class="navigation navigation-next " aria-label="Next page: 整合"><i class="fa fa-angle-right"></i></a>
+        <a href="../../content/cmd/cmd-apm-list-packages.html" class="navigation navigation-next " aria-label="Next page: apm list --packages"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
