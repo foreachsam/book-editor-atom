@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>設定字型 | Editor - Atom</title>
+        <title>apm init --package | Editor - Atom</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../content/howto/font-markdown-preview.html" />
+    <link rel="next" href="../../content/cmd/cmd-apm-link.html" />
     
     
-    <link rel="prev" href="../../content/howto/index.html" />
+    <link rel="prev" href="../../content/cmd/cmd-apm-init.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="4.1" data-basepath="../.." data-revision="1437990716581">
+    <div class="book" data-level="5.1.2.1" data-basepath="../.." data-revision="1437990716581">
     
 
 <div class="book-summary">
@@ -191,7 +191,7 @@
                 
     
         
-        <li class="chapter active" data-level="4.1" data-path="content/howto/font.html">
+        <li class="chapter " data-level="4.1" data-path="content/howto/font.html">
             
                 
                     <a href="../../content/howto/font.html">
@@ -339,7 +339,7 @@
                 
     
         
-        <li class="chapter " data-level="5.1.2.1" data-path="content/cmd/cmd-apm-init-package.html">
+        <li class="chapter active" data-level="5.1.2.1" data-path="content/cmd/cmd-apm-init-package.html">
             
                 
                     <a href="../../content/cmd/cmd-apm-init-package.html">
@@ -506,34 +506,78 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_12">
+                    <section class="normal" id="section-gitbook_2">
                     
-                        <h1 id="">如何設定字型</h1>
-<p>因為看不到中文，所以需要自己設定字型。</p>
-<p>使用快捷鍵「ctrl + ,」,叫出「Settings」畫面。
-在頁籤「Settings」</p>
-<p>有一個欄位「Font Family」可以設定editor的字型，只要填入「&quot;Liberation Mono&quot;, &quot;Noto Sans CJK TC&quot;」就會顯示中文了，跟設定CSS的習慣一樣。
-前面我設定「英文」要顯示的「字型」，這個範例設定「Liberation Mono」。
-後面我設定「中文」要顯示的「字型」，這個範例設定「Noto Sans CJK TC」。</p>
-<p>有一個欄位「Font Size」，則是設定「字型大小」，這裡我填入「22」當範例。</p>
+                        <h1 id="apm-init---package">apm init --package</h1>
+<h2 id="project">產生「~/Project」資料夾</h2>
 <p>執行</p>
-<pre><code>$ cat ~/.atom/config.cson
-</code></pre><p>顯示</p>
-<pre><code>&quot;*&quot;:
-  &quot;exception-reporting&quot;:
-    userId: &quot;d8e79325-9392-7d37-003b-5dcd5c261622&quot;
-  welcome:
-    showOnStartup: false
-  core: {}
-  editor:
-    invisibles: {}
-    fontSize: 22
-    fontFamily: &quot;\&quot;Liberation Mono\&quot;, \&quot;Noto Sans CJK TC\&quot;&quot;
-</code></pre><h2 id="">查詢字型名稱</h2>
-<p>我的系統有安裝「Noto」字型</p>
-<p>所以只要執行下面的指令，就可查到字型名稱。</p>
-<pre><code>$ fc-match -a | grep CJK
+<pre><code class="lang-sh">$ mkdir ~/Project -p
 </code></pre>
+<h2 id="project">切換到「~/Project」資料夾</h2>
+<p>執行</p>
+<pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Project
+</code></pre>
+<h2 id="hello">初始「hello」專案</h2>
+<p>執行</p>
+<pre><code class="lang-sh">$ apm init --package hello
+</code></pre>
+<h2 id="hello">檢視「hello」檔案結構</h2>
+<p>執行</p>
+<pre><code class="lang-sh">$ tree hello
+</code></pre>
+<p>顯示</p>
+<pre><code>hello
+├── CHANGELOG.md
+├── keymaps
+│   └── hello.cson
+├── lib
+│   ├── hello.coffee
+│   └── hello-view.coffee
+├── LICENSE.md
+├── menus
+│   └── hello.cson
+├── package.json
+├── README.md
+├── spec
+│   ├── hello-spec.coffee
+│   └── hello-view-spec.coffee
+└── styles
+    └── hello.less
+
+5 directories, 11 files
+</code></pre><h2 id="">建立連結</h2>
+<p>執行</p>
+<pre><code>$ apm link hello
+</code></pre><p>顯示</p>
+<pre><code>/home/user/.atom/packages/hello -&gt; /home/user/Project/hello
+</code></pre><h2 id="">顯示目前連結的專案</h2>
+<p>執行</p>
+<pre><code class="lang-sh">$ apm links
+</code></pre>
+<p>顯示</p>
+<pre><code>/home/user/.atom/dev/packages (0)
+└── (no links)
+/home/user/.atom/packages (1)
+└── hello -&gt; /home/user/Project/hello
+</code></pre><h2 id="atomhello">用「atom」開啟「hello」專案</h2>
+<p>執行</p>
+<pre><code>$ atom hello
+</code></pre><h2 id="hello">解除「hello」連結</h2>
+<p>執行</p>
+<pre><code>apm unlink hello
+</code></pre><p>顯示</p>
+<pre><code>Unlinking /home/user/.atom/packages/hello ✓
+</code></pre><h2 id="">其他方式</h2>
+<p>執行
+「Atom編輯器的功能選單」</p>
+<p>的
+「Packages / Package Generator / Generate Atom Package」</p>
+<h2 id="">更多參考</h2>
+<ul>
+<li>Github / atom / <a href="https://github.com/atom/package-generator" target="_blank">package-generator</a></li>
+<li>Atom Flight Manual / 3 : Hacking Atom /  <a href="https://atom.io/docs/v1.0.2/hacking-atom-package-word-count" target="_blank">3.3 Package: Word Count</a></li>
+</ul>
+
                     
                     </section>
                 
@@ -543,10 +587,10 @@
         </div>
 
         
-        <a href="../../content/howto/index.html" class="navigation navigation-prev " aria-label="Previous page: Howto"><i class="fa fa-angle-left"></i></a>
+        <a href="../../content/cmd/cmd-apm-init.html" class="navigation navigation-prev " aria-label="Previous page: apm init"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../content/howto/font-markdown-preview.html" class="navigation navigation-next " aria-label="Next page: 如何設定「Mardown Preview」的字型"><i class="fa fa-angle-right"></i></a>
+        <a href="../../content/cmd/cmd-apm-link.html" class="navigation navigation-next " aria-label="Next page: apm link"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

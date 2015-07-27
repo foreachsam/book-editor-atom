@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>設定字型 | Editor - Atom</title>
+        <title>apm links | Editor - Atom</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 1.5.0">
@@ -19,10 +19,10 @@
         
     
     
-    <link rel="next" href="../../content/howto/font-markdown-preview.html" />
+    <link rel="next" href="../../content/cmd/cmd-apm-unlink.html" />
     
     
-    <link rel="prev" href="../../content/howto/index.html" />
+    <link rel="prev" href="../../content/cmd/cmd-apm-link.html" />
     
 
         
@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-level="4.1" data-basepath="../.." data-revision="1437990716581">
+    <div class="book" data-level="5.1.4" data-basepath="../.." data-revision="1437990716581">
     
 
 <div class="book-summary">
@@ -191,7 +191,7 @@
                 
     
         
-        <li class="chapter active" data-level="4.1" data-path="content/howto/font.html">
+        <li class="chapter " data-level="4.1" data-path="content/howto/font.html">
             
                 
                     <a href="../../content/howto/font.html">
@@ -376,7 +376,7 @@
         </li>
     
         
-        <li class="chapter " data-level="5.1.4" data-path="content/cmd/cmd-apm-links.html">
+        <li class="chapter active" data-level="5.1.4" data-path="content/cmd/cmd-apm-links.html">
             
                 
                     <a href="../../content/cmd/cmd-apm-links.html">
@@ -506,33 +506,24 @@
                 <div class="page-inner">
                 
                 
-                    <section class="normal" id="section-gitbook_12">
+                    <section class="normal" id="section-gitbook_5">
                     
-                        <h1 id="">如何設定字型</h1>
-<p>因為看不到中文，所以需要自己設定字型。</p>
-<p>使用快捷鍵「ctrl + ,」,叫出「Settings」畫面。
-在頁籤「Settings」</p>
-<p>有一個欄位「Font Family」可以設定editor的字型，只要填入「&quot;Liberation Mono&quot;, &quot;Noto Sans CJK TC&quot;」就會顯示中文了，跟設定CSS的習慣一樣。
-前面我設定「英文」要顯示的「字型」，這個範例設定「Liberation Mono」。
-後面我設定「中文」要顯示的「字型」，這個範例設定「Noto Sans CJK TC」。</p>
-<p>有一個欄位「Font Size」，則是設定「字型大小」，這裡我填入「22」當範例。</p>
+                        <h1 id="apm-links">apm links</h1>
+<h2 id="">使用說明</h2>
 <p>執行</p>
-<pre><code>$ cat ~/.atom/config.cson
-</code></pre><p>顯示</p>
-<pre><code>&quot;*&quot;:
-  &quot;exception-reporting&quot;:
-    userId: &quot;d8e79325-9392-7d37-003b-5dcd5c261622&quot;
-  welcome:
-    showOnStartup: false
-  core: {}
-  editor:
-    invisibles: {}
-    fontSize: 22
-    fontFamily: &quot;\&quot;Liberation Mono\&quot;, \&quot;Noto Sans CJK TC\&quot;&quot;
-</code></pre><h2 id="">查詢字型名稱</h2>
-<p>我的系統有安裝「Noto」字型</p>
-<p>所以只要執行下面的指令，就可查到字型名稱。</p>
-<pre><code>$ fc-match -a | grep CJK
+<pre><code class="lang-sh">$ apm <span class="hljs-built_in">help</span> links
+</code></pre>
+<p>顯示</p>
+<pre><code>Usage: apm links
+
+List all of the symlinked atom packages in ~/.atom/packages and
+~/.atom/dev/packages.
+
+Options:
+  -h, --help  Print this usage message
+
+  Prefix an option with `no-` to set it to false such as --no-color to disable
+  colored output.
 </code></pre>
                     
                     </section>
@@ -543,10 +534,10 @@
         </div>
 
         
-        <a href="../../content/howto/index.html" class="navigation navigation-prev " aria-label="Previous page: Howto"><i class="fa fa-angle-left"></i></a>
+        <a href="../../content/cmd/cmd-apm-link.html" class="navigation navigation-prev " aria-label="Previous page: apm link"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../content/howto/font-markdown-preview.html" class="navigation navigation-next " aria-label="Next page: 如何設定「Mardown Preview」的字型"><i class="fa fa-angle-right"></i></a>
+        <a href="../../content/cmd/cmd-apm-unlink.html" class="navigation navigation-next " aria-label="Next page: apm unlink"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
