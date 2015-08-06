@@ -1,2 +1,3 @@
 # book-editor-atom
-editor atom note
+
+[Atom Editor 使用筆記](http://foreachsam.github.io/book-editor-atom/book/)
