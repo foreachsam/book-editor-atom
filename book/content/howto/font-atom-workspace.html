@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>apm list | Atom Editor 使用筆記</title>
+        <title>如何設定「Atom Workspace」的中文字型 | Atom Editor 使用筆記</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.2.0">
@@ -25,10 +25,10 @@
         
     
     
-    <link rel="next" href="../../content/cmd/cmd-apm-list-packages.html" />
+    <link rel="next" href="../../content/howto/tongwen.html" />
     
     
-    <link rel="prev" href="../../content/start/cmd-apm.html" />
+    <link rel="prev" href="../../content/howto/font-markdown-preview.html" />
     
 
         
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="5.1.1" data-basepath="../.." data-revision="Sun Sep 06 2015 18:55:23 GMT+0800 (CST)">
+    <div class="book" data-level="4.1.2" data-basepath="../.." data-revision="Sun Sep 06 2015 18:55:23 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -215,7 +215,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.1.2" data-path="content/howto/font-atom-workspace.html">
+        <li class="chapter active" data-level="4.1.2" data-path="content/howto/font-atom-workspace.html">
             
                 
                     <a href="../../content/howto/font-atom-workspace.html">
@@ -287,7 +287,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="5.1.1" data-path="content/cmd/cmd-apm-list.html">
+        <li class="chapter " data-level="5.1.1" data-path="content/cmd/cmd-apm-list.html">
             
                 
                     <a href="../../content/cmd/cmd-apm-list.html">
@@ -534,223 +534,16 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="apm-list">apm list</h1>
-<h2 id="%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E">&#x4F7F;&#x7528;&#x8AAA;&#x660E;</h2>
-<p>&#x57F7;&#x884C;</p>
-<pre><code>$ apm help list
-</code></pre><p>&#x986F;&#x793A;</p>
-<pre><code>Usage: apm list
-       apm list --themes
-       apm list --packages
-       apm list --installed
-       apm list --installed --bare &gt; my-packages.txt
-       apm list --json
-
-List all the installed packages and also the packages bundled with Atom.
-
-Options:
-  -b, --bare       Print packages one per line with no formatting                          [boolean]
-  -d, --dev        Include dev packages                                    [boolean] [default: true]
-  -h, --help       Print this usage message
-  -i, --installed  Only list installed packages/themes                                     [boolean]
-  -j, --json       Output all packages as a JSON object                                    [boolean]
-  -l, --links      Include linked packages                                 [boolean] [default: true]
-  -t, --themes     Only list themes                                                        [boolean]
-  -p, --packages   Only list packages                                                      [boolean]
-
-  Prefix an option with `no-` to set it to false such as --no-color to disable
-  colored output.
-</code></pre><h2 id="%E4%B8%BB%E8%A6%81%E7%AF%84%E4%BE%8B">&#x4E3B;&#x8981;&#x7BC4;&#x4F8B;</h2>
-<p>&#x57F7;&#x884C;</p>
-<pre><code>$ apm list
-</code></pre><p>&#x986F;&#x793A;</p>
-<pre><code>Built-in Atom packages (88)
-&#x251C;&#x2500;&#x2500; archive-view@0.58.0
-&#x251C;&#x2500;&#x2500; atom-dark-syntax@0.27.0
-&#x251C;&#x2500;&#x2500; atom-dark-ui@0.49.0
-&#x251C;&#x2500;&#x2500; atom-light-syntax@0.28.0
-&#x251C;&#x2500;&#x2500; atom-light-ui@0.41.0
-&#x251C;&#x2500;&#x2500; autocomplete-atom-api@0.9.0
-&#x251C;&#x2500;&#x2500; autocomplete-css@0.8.0
-&#x251C;&#x2500;&#x2500; autocomplete-html@0.7.2
-&#x251C;&#x2500;&#x2500; autocomplete-plus@2.17.4
-&#x251C;&#x2500;&#x2500; autocomplete-snippets@1.7.0
-&#x251C;&#x2500;&#x2500; autoflow@0.25.0
-&#x251C;&#x2500;&#x2500; autosave@0.22.0
-&#x251C;&#x2500;&#x2500; background-tips@0.25.0
-&#x251C;&#x2500;&#x2500; base16-tomorrow-dark-theme@0.26.0
-&#x251C;&#x2500;&#x2500; base16-tomorrow-light-theme@0.9.0
-&#x251C;&#x2500;&#x2500; bookmarks@0.35.0
-&#x251C;&#x2500;&#x2500; bracket-matcher@0.76.0
-&#x251C;&#x2500;&#x2500; command-palette@0.36.0
-&#x251C;&#x2500;&#x2500; deprecation-cop@0.53.0
-&#x251C;&#x2500;&#x2500; dev-live-reload@0.46.0
-&#x251C;&#x2500;&#x2500; encoding-selector@0.21.0
-&#x251C;&#x2500;&#x2500; exception-reporting@0.35.0
-&#x251C;&#x2500;&#x2500; find-and-replace@0.174.2
-&#x251C;&#x2500;&#x2500; fuzzy-finder@0.87.0
-&#x251C;&#x2500;&#x2500; git-diff@0.55.0
-&#x251C;&#x2500;&#x2500; go-to-line@0.30.0
-&#x251C;&#x2500;&#x2500; grammar-selector@0.47.0
-&#x251C;&#x2500;&#x2500; image-view@0.54.0
-&#x251C;&#x2500;&#x2500; incompatible-packages@0.24.0
-&#x251C;&#x2500;&#x2500; keybinding-resolver@0.33.0
-&#x251C;&#x2500;&#x2500; language-c@0.45.0
-&#x251C;&#x2500;&#x2500; language-clojure@0.16.0
-&#x251C;&#x2500;&#x2500; language-coffee-script@0.41.0
-&#x251C;&#x2500;&#x2500; language-csharp@0.6.0
-&#x251C;&#x2500;&#x2500; language-css@0.32.0
-&#x251C;&#x2500;&#x2500; language-gfm@0.78.0
-&#x251C;&#x2500;&#x2500; language-git@0.10.0
-&#x251C;&#x2500;&#x2500; language-go@0.30.0
-&#x251C;&#x2500;&#x2500; language-html@0.40.0
-&#x251C;&#x2500;&#x2500; language-hyperlink@0.14.0
-&#x251C;&#x2500;&#x2500; language-java@0.15.0
-&#x251C;&#x2500;&#x2500; language-javascript@0.80.0
-&#x251C;&#x2500;&#x2500; language-json@0.15.0
-&#x251C;&#x2500;&#x2500; language-less@0.28.0
-&#x251C;&#x2500;&#x2500; language-make@0.14.0
-&#x251C;&#x2500;&#x2500; language-mustache@0.12.0
-&#x251C;&#x2500;&#x2500; language-objective-c@0.15.0
-&#x251C;&#x2500;&#x2500; language-perl@0.28.0
-&#x251C;&#x2500;&#x2500; language-php@0.27.0
-&#x251C;&#x2500;&#x2500; language-property-list@0.8.0
-&#x251C;&#x2500;&#x2500; language-python@0.37.0
-&#x251C;&#x2500;&#x2500; language-ruby@0.56.0
-&#x251C;&#x2500;&#x2500; language-ruby-on-rails@0.22.0
-&#x251C;&#x2500;&#x2500; language-sass@0.39.0
-&#x251C;&#x2500;&#x2500; language-shellscript@0.15.0
-&#x251C;&#x2500;&#x2500; language-source@0.9.0
-&#x251C;&#x2500;&#x2500; language-sql@0.17.0
-&#x251C;&#x2500;&#x2500; language-text@0.7.0
-&#x251C;&#x2500;&#x2500; language-todo@0.25.0
-&#x251C;&#x2500;&#x2500; language-toml@0.16.0
-&#x251C;&#x2500;&#x2500; language-xml@0.30.0
-&#x251C;&#x2500;&#x2500; language-yaml@0.22.0
-&#x251C;&#x2500;&#x2500; link@0.30.0
-&#x251C;&#x2500;&#x2500; markdown-preview@0.150.0
-&#x251C;&#x2500;&#x2500; metrics@0.51.0
-&#x251C;&#x2500;&#x2500; notifications@0.57.0
-&#x251C;&#x2500;&#x2500; one-dark-syntax@1.0.0
-&#x251C;&#x2500;&#x2500; one-dark-ui@1.0.0
-&#x251C;&#x2500;&#x2500; one-light-syntax@1.0.0
-&#x251C;&#x2500;&#x2500; one-light-ui@1.0.0
-&#x251C;&#x2500;&#x2500; open-on-github@0.37.0
-&#x251C;&#x2500;&#x2500; package-generator@0.40.0
-&#x251C;&#x2500;&#x2500; release-notes@0.53.0
-&#x251C;&#x2500;&#x2500; settings-view@0.211.0
-&#x251C;&#x2500;&#x2500; snippets@0.95.0
-&#x251C;&#x2500;&#x2500; solarized-dark-syntax@0.38.1
-&#x251C;&#x2500;&#x2500; solarized-light-syntax@0.22.1
-&#x251C;&#x2500;&#x2500; spell-check@0.59.0
-&#x251C;&#x2500;&#x2500; status-bar@0.75.1
-&#x251C;&#x2500;&#x2500; styleguide@0.44.0
-&#x251C;&#x2500;&#x2500; symbols-view@0.100.0
-&#x251C;&#x2500;&#x2500; tabs@0.82.0
-&#x251C;&#x2500;&#x2500; timecop@0.31.0
-&#x251C;&#x2500;&#x2500; tree-view@0.177.0
-&#x251C;&#x2500;&#x2500; update-package-dependencies@0.10.0
-&#x251C;&#x2500;&#x2500; welcome@0.29.0
-&#x251C;&#x2500;&#x2500; whitespace@0.30.0
-&#x2514;&#x2500;&#x2500; wrap-guide@0.35.0
-
-/home/user/.atom/packages (1)
-&#x2514;&#x2500;&#x2500; hello-package@0.0.0
-</code></pre><h2 id="bare-%E7%AF%84%E4%BE%8B">bare &#x7BC4;&#x4F8B;</h2>
-<p>&#x57F7;&#x884C;</p>
-<pre><code>$ apm list --bare
-</code></pre><p>&#x986F;&#x793A;</p>
-<pre><code>archive-view@0.58.0
-atom-dark-syntax@0.27.0
-atom-dark-ui@0.49.0
-atom-light-syntax@0.28.0
-atom-light-ui@0.41.0
-autocomplete-atom-api@0.9.0
-autocomplete-css@0.8.0
-autocomplete-html@0.7.2
-autocomplete-plus@2.17.4
-autocomplete-snippets@1.7.0
-autoflow@0.25.0
-autosave@0.22.0
-background-tips@0.25.0
-base16-tomorrow-dark-theme@0.26.0
-base16-tomorrow-light-theme@0.9.0
-bookmarks@0.35.0
-bracket-matcher@0.76.0
-command-palette@0.36.0
-deprecation-cop@0.53.0
-dev-live-reload@0.46.0
-encoding-selector@0.21.0
-exception-reporting@0.35.0
-find-and-replace@0.174.2
-fuzzy-finder@0.87.0
-git-diff@0.55.0
-go-to-line@0.30.0
-grammar-selector@0.47.0
-image-view@0.54.0
-incompatible-packages@0.24.0
-keybinding-resolver@0.33.0
-language-c@0.45.0
-language-clojure@0.16.0
-language-coffee-script@0.41.0
-language-csharp@0.6.0
-language-css@0.32.0
-language-gfm@0.78.0
-language-git@0.10.0
-language-go@0.30.0
-language-html@0.40.0
-language-hyperlink@0.14.0
-language-java@0.15.0
-language-javascript@0.80.0
-language-json@0.15.0
-language-less@0.28.0
-language-make@0.14.0
-language-mustache@0.12.0
-language-objective-c@0.15.0
-language-perl@0.28.0
-language-php@0.27.0
-language-property-list@0.8.0
-language-python@0.37.0
-language-ruby@0.56.0
-language-ruby-on-rails@0.22.0
-language-sass@0.39.0
-language-shellscript@0.15.0
-language-source@0.9.0
-language-sql@0.17.0
-language-text@0.7.0
-language-todo@0.25.0
-language-toml@0.16.0
-language-xml@0.30.0
-language-yaml@0.22.0
-link@0.30.0
-markdown-preview@0.150.0
-metrics@0.51.0
-notifications@0.57.0
-one-dark-syntax@1.0.0
-one-dark-ui@1.0.0
-one-light-syntax@1.0.0
-one-light-ui@1.0.0
-open-on-github@0.37.0
-package-generator@0.40.0
-release-notes@0.53.0
-settings-view@0.211.0
-snippets@0.95.0
-solarized-dark-syntax@0.38.1
-solarized-light-syntax@0.22.1
-spell-check@0.59.0
-status-bar@0.75.1
-styleguide@0.44.0
-symbols-view@0.100.0
-tabs@0.82.0
-timecop@0.31.0
-tree-view@0.177.0
-update-package-dependencies@0.10.0
-welcome@0.29.0
-whitespace@0.30.0
-wrap-guide@0.35.0
-
-hello-package@0.0.0
+                        <h1 id="%E5%A6%82%E4%BD%95%E8%A8%AD%E5%AE%9A%E3%80%8Catom-workspace%E3%80%8D%E7%9A%84%E4%B8%AD%E6%96%87%E5%AD%97%E5%9E%8B">&#x5982;&#x4F55;&#x8A2D;&#x5B9A;&#x300C;Atom Workspace&#x300D;&#x7684;&#x4E2D;&#x6587;&#x5B57;&#x578B;</h1>
+<p>&#x9078;&#x64C7;&#x529F;&#x80FD;&#x9078;&#x55AE;&#x300C;Edit / Open Your Stylesheet&#x300D;&#xFF0C;</p>
+<p>&#x7DE8;&#x8F2F;&#x300C;~/.atom/styles.less&#x300D;&#xFF0C;</p>
+<p>&#x52A0;&#x5165;&#x4E0B;&#x9762;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;&#xFF0C;&#x6A94;&#x6848;&#x5132;&#x5B58;&#x5F8C;&#x5C31;&#x6703;&#x751F;&#x6548;&#x4E86;&#x3002;</p>
+<pre><code class="lang-css"><span class="hljs-at_rule">@<span class="hljs-keyword">font-family:</span> <span class="hljs-string">&quot;Liberation Mono&quot;</span>, <span class="hljs-string">&quot;Noto Sans CJK TC&quot;</span>, monospace</span>;
+<span class="hljs-tag">atom-workspace</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">font-family</span>:<span class="hljs-value"> @font-family</span></span>;
+}</span>
 </code></pre>
+
                     
                     </section>
                 
@@ -760,10 +553,10 @@ hello-package@0.0.0
         </div>
 
         
-        <a href="../../content/start/cmd-apm.html" class="navigation navigation-prev " aria-label="Previous page: apm指令的使用"><i class="fa fa-angle-left"></i></a>
+        <a href="../../content/howto/font-markdown-preview.html" class="navigation navigation-prev " aria-label="Previous page: 如何設定「Mardown Preview」的中文字型"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../content/cmd/cmd-apm-list-packages.html" class="navigation navigation-next " aria-label="Next page: apm list --packages"><i class="fa fa-angle-right"></i></a>
+        <a href="../../content/howto/tongwen.html" class="navigation navigation-next " aria-label="Next page: 繁簡轉換"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
