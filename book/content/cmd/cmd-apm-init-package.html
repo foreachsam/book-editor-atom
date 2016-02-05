@@ -8,7 +8,7 @@
         <title>apm init --package | Atom Editor 使用筆記</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 2.2.0">
+        <meta name="generator" content="GitBook 2.6.6">
         
         
         <meta name="HandheldFriendly" content="true"/>
@@ -20,6 +20,20 @@
         
     <link rel="stylesheet" href="../../gitbook/style.css">
     
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../../asset/css/website.css">
     
 
         
@@ -36,22 +50,26 @@
     <body>
         
         
-    <div class="book" data-level="5.1.2.1" data-basepath="../.." data-revision="Sun Sep 06 2015 19:30:59 GMT+0800 (CST)">
+    <div class="book"
+        data-level="5.1.2.1"
+        data-chapter-title="apm init --package"
+        data-filepath="content/cmd/cmd-apm-init-package.md"
+        data-basepath="../.."
+        data-revision="Sat Feb 06 2016 01:29:45 GMT+0800 (CST)"
+        data-innerlanguage="">
     
 
 <div class="book-summary">
-    <div class="book-search">
-        <input type="text" placeholder="Type to search" class="form-control" />
-    </div>
-    <ul class="summary">
-        
-        
-        
-        
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
 
-        
+            
 
-        
+            
     
         <li class="chapter " data-level="0" data-path="index.html">
             
@@ -431,95 +449,23 @@
     
 
 
-        
-        <li class="divider"></li>
-        <li>
-            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-                Published with GitBook
-            </a>
-        </li>
-        
-    </ul>
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
 </div>
 
     <div class="book-body">
         <div class="body-inner">
-            <div class="book-header">
+            <div class="book-header" role="navigation">
     <!-- Actions Left -->
-    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
-    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
     
-    <div id="font-settings-wrapper" class="dropdown pull-left">
-        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
-        </a>
-        <div class="dropdown-menu font-settings">
-    <div class="dropdown-caret">
-        <span class="caret-outer"></span>
-        <span class="caret-inner"></span>
-    </div>
-
-    <div class="buttons">
-        <button type="button" id="reduce-font-size" class="button size-2">A</button>
-        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
-    </div>
-
-    <div class="buttons font-family-list">
-        <button type="button" data-font="0" class="button">Serif</button>
-        <button type="button" data-font="1" class="button">Sans</button>
-    </div>
-
-    <div class="buttons color-theme-list">
-        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
-        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
-        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
-    </div>
-</div>
-
-    </div>
-
-    <!-- Actions Right -->
-    
-    <div class="dropdown pull-right">
-        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
-        </a>
-        <div class="dropdown-menu font-settings dropdown-left">
-            <div class="dropdown-caret">
-                <span class="caret-outer"></span>
-                <span class="caret-inner"></span>
-            </div>
-            <div class="buttons">
-                <button type="button" data-sharing="twitter" class="button">
-                    Share on Twitter
-                </button>
-                <button type="button" data-sharing="google-plus" class="button">
-                    Share on Google
-                </button>
-                <button type="button" data-sharing="facebook" class="button">
-                    Share on Facebook
-                </button>
-                <button type="button" data-sharing="weibo" class="button">
-                    Share on Weibo
-                </button>
-                <button type="button" data-sharing="instapaper" class="button">
-                    Share on Instapaper
-                </button>
-            </div>
-        </div>
-    </div>
-    
-
-    
-    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
-    
-    
-    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
-    
-    
-    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
-    
-    
-    
-
 
     <!-- Title -->
     <h1>
@@ -528,26 +474,26 @@
     </h1>
 </div>
 
-            <div class="page-wrapper" tabindex="-1">
+            <div class="page-wrapper" tabindex="-1" role="main">
                 <div class="page-inner">
                 
                 
                     <section class="normal" id="section-">
                     
                         <h1 id="apm-init-package">apm init --package</h1>
-<h2 id="%E7%94%A2%E7%94%9F%E3%80%8C-project%E3%80%8D%E8%B3%87%E6%96%99%E5%A4%BE">&#x7522;&#x751F;&#x300C;~/Project&#x300D;&#x8CC7;&#x6599;&#x593E;</h2>
+<h2 id="&#x7522;&#x751F;&#x300C;project&#x300D;&#x8CC7;&#x6599;&#x593E;">&#x7522;&#x751F;&#x300C;~/Project&#x300D;&#x8CC7;&#x6599;&#x593E;</h2>
 <p>&#x57F7;&#x884C;</p>
 <pre><code class="lang-sh">$ mkdir ~/Project -p
 </code></pre>
-<h2 id="%E5%88%87%E6%8F%9B%E5%88%B0%E3%80%8C-project%E3%80%8D%E8%B3%87%E6%96%99%E5%A4%BE">&#x5207;&#x63DB;&#x5230;&#x300C;~/Project&#x300D;&#x8CC7;&#x6599;&#x593E;</h2>
+<h2 id="&#x5207;&#x63DB;&#x5230;&#x300C;project&#x300D;&#x8CC7;&#x6599;&#x593E;">&#x5207;&#x63DB;&#x5230;&#x300C;~/Project&#x300D;&#x8CC7;&#x6599;&#x593E;</h2>
 <p>&#x57F7;&#x884C;</p>
 <pre><code class="lang-sh">$ <span class="hljs-built_in">cd</span> ~/Project
 </code></pre>
-<h2 id="%E5%88%9D%E5%A7%8B%E3%80%8Chello%E3%80%8D%E5%B0%88%E6%A1%88">&#x521D;&#x59CB;&#x300C;hello&#x300D;&#x5C08;&#x6848;</h2>
+<h2 id="&#x521D;&#x59CB;&#x300C;hello&#x300D;&#x5C08;&#x6848;">&#x521D;&#x59CB;&#x300C;hello&#x300D;&#x5C08;&#x6848;</h2>
 <p>&#x57F7;&#x884C;</p>
 <pre><code class="lang-sh">$ apm init --package hello
 </code></pre>
-<h2 id="%E6%AA%A2%E8%A6%96%E3%80%8Chello%E3%80%8D%E6%AA%94%E6%A1%88%E7%B5%90%E6%A7%8B">&#x6AA2;&#x8996;&#x300C;hello&#x300D;&#x6A94;&#x6848;&#x7D50;&#x69CB;</h2>
+<h2 id="&#x6AA2;&#x8996;&#x300C;hello&#x300D;&#x6A94;&#x6848;&#x7D50;&#x69CB;">&#x6AA2;&#x8996;&#x300C;hello&#x300D;&#x6A94;&#x6848;&#x7D50;&#x69CB;</h2>
 <p>&#x57F7;&#x884C;</p>
 <pre><code class="lang-sh">$ tree hello
 </code></pre>
@@ -571,12 +517,12 @@
     &#x2514;&#x2500;&#x2500; hello.less
 
 5 directories, 11 files
-</code></pre><h2 id="%E5%BB%BA%E7%AB%8B%E9%80%A3%E7%B5%90">&#x5EFA;&#x7ACB;&#x9023;&#x7D50;</h2>
+</code></pre><h2 id="&#x5EFA;&#x7ACB;&#x9023;&#x7D50;">&#x5EFA;&#x7ACB;&#x9023;&#x7D50;</h2>
 <p>&#x57F7;&#x884C;</p>
 <pre><code>$ apm link hello
 </code></pre><p>&#x986F;&#x793A;</p>
 <pre><code>/home/user/.atom/packages/hello -&gt; /home/user/Project/hello
-</code></pre><h2 id="%E9%A1%AF%E7%A4%BA%E7%9B%AE%E5%89%8D%E9%80%A3%E7%B5%90%E7%9A%84%E5%B0%88%E6%A1%88">&#x986F;&#x793A;&#x76EE;&#x524D;&#x9023;&#x7D50;&#x7684;&#x5C08;&#x6848;</h2>
+</code></pre><h2 id="&#x986F;&#x793A;&#x76EE;&#x524D;&#x9023;&#x7D50;&#x7684;&#x5C08;&#x6848;">&#x986F;&#x793A;&#x76EE;&#x524D;&#x9023;&#x7D50;&#x7684;&#x5C08;&#x6848;</h2>
 <p>&#x57F7;&#x884C;</p>
 <pre><code class="lang-sh">$ apm links
 </code></pre>
@@ -585,25 +531,25 @@
 &#x2514;&#x2500;&#x2500; (no links)
 /home/user/.atom/packages (1)
 &#x2514;&#x2500;&#x2500; hello -&gt; /home/user/Project/hello
-</code></pre><h2 id="%E7%94%A8%E3%80%8Catom%E3%80%8D%E9%96%8B%E5%95%9F%E3%80%8Chello%E3%80%8D%E5%B0%88%E6%A1%88">&#x7528;&#x300C;atom&#x300D;&#x958B;&#x555F;&#x300C;hello&#x300D;&#x5C08;&#x6848;</h2>
+</code></pre><h2 id="&#x7528;&#x300C;atom&#x300D;&#x958B;&#x555F;&#x300C;hello&#x300D;&#x5C08;&#x6848;">&#x7528;&#x300C;atom&#x300D;&#x958B;&#x555F;&#x300C;hello&#x300D;&#x5C08;&#x6848;</h2>
 <p>&#x57F7;&#x884C;</p>
 <pre><code>$ atom hello
-</code></pre><h2 id="%E8%A7%A3%E9%99%A4%E3%80%8Chello%E3%80%8D%E9%80%A3%E7%B5%90">&#x89E3;&#x9664;&#x300C;hello&#x300D;&#x9023;&#x7D50;</h2>
+</code></pre><h2 id="&#x89E3;&#x9664;&#x300C;hello&#x300D;&#x9023;&#x7D50;">&#x89E3;&#x9664;&#x300C;hello&#x300D;&#x9023;&#x7D50;</h2>
 <p>&#x57F7;&#x884C;</p>
 <pre><code>apm unlink hello
 </code></pre><p>&#x986F;&#x793A;</p>
 <pre><code>Unlinking /home/user/.atom/packages/hello &#x2713;
-</code></pre><h2 id="%E5%85%B6%E4%BB%96%E6%96%B9%E5%BC%8F">&#x5176;&#x4ED6;&#x65B9;&#x5F0F;</h2>
+</code></pre><h2 id="&#x5176;&#x4ED6;&#x65B9;&#x5F0F;">&#x5176;&#x4ED6;&#x65B9;&#x5F0F;</h2>
 <p>&#x57F7;&#x884C;
 &#x300C;Atom&#x7DE8;&#x8F2F;&#x5668;&#x7684;&#x529F;&#x80FD;&#x9078;&#x55AE;&#x300D;</p>
 <p>&#x7684;
 &#x300C;Packages / Package Generator / Generate Atom Package&#x300D;</p>
-<h2 id="%E6%9B%B4%E5%A4%9A%E5%8F%83%E8%80%83">&#x66F4;&#x591A;&#x53C3;&#x8003;</h2>
+<h2 id="&#x66F4;&#x591A;&#x53C3;&#x8003;">&#x66F4;&#x591A;&#x53C3;&#x8003;</h2>
 <ul>
 <li>Github / atom / <a href="https://github.com/atom/package-generator" target="_blank">package-generator</a></li>
 <li>Atom Flight Manual / 3 : Hacking Atom /  <a href="https://atom.io/docs/v1.0.2/hacking-atom-package-word-count" target="_blank">3.3 Package: Word Count</a></li>
 </ul>
-<h2 id="%E7%AF%84%E4%BE%8B%E5%B0%88%E6%A1%88">&#x7BC4;&#x4F8B;&#x5C08;&#x6848;</h2>
+<h2 id="&#x7BC4;&#x4F8B;&#x5C08;&#x6848;">&#x7BC4;&#x4F8B;&#x5C08;&#x6848;</h2>
 <ul>
 <li><a href="https://github.com/foreachsam/package-atom-tongwen" target="_blank">Atom &#x7E41;&#x7C21;&#x8F49;&#x63DB; - &#x4F7F;&#x7528;&#x65B0;&#x540C;&#x6587;&#x5802;(TongWen)</a></li>
 </ul>
@@ -632,9 +578,25 @@
     <script src="../../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
     
 
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"fontSettings":{"theme":"night","family":"sans","size":1},"ga":{"token":"UA-56999876-1","configuration":"auto"}};
+    var config = {"fontsettings":{"theme":"night","family":"sans","size":2},"ga":{"token":"UA-56999876-1","configuration":"auto"},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}};
     gitbook.start(config);
 });
 </script>
